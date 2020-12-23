@@ -14,10 +14,10 @@
       const hand_choki=1;
       const hand_pa=2;
       // ハンド表示用配列
-      const hand_text = ["ぐー", "ちょき", "ぱー"];
+      const hand_text = ["はい", "いいえ", "友人"];
       // 勝敗判定用変数（定数）
-      const judge_win=0;
-      const judge_draw=1;
+      const judge_win=1;
+      const judge_draw=0;
       const judge_loose=2;
       // 勝敗判定表
       const judge = [
@@ -88,7 +88,7 @@
         $(".hand").css("display", "inline");
         // ニューゲームボタン非表示
         $("#newgame").css("display", "none");
-        $("#result").html("じゃんけん・・・ぽん")
+        $("#result").html("好物は母のにぎりめしである")
         $("#result2").html("");
       }
 
