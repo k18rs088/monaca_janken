@@ -21,12 +21,12 @@
       const judge_loose=2;
       // 勝敗判定表
       const judge = [
-        [judge_draw, judge_win, judge_loose],
-        [judge_loose, judge_draw, judge_win],
-        [judge_win, judge_loose, judge_draw],
+        [judge_win, judge_loose, judge_loose],
+        [judge_loose, judge_win, judge_loose],
+        [judge_loose, judge_loose, judge_win],
       ];
       // 勝敗結果表示用配列
-      const judge_text = ["勝ち", "あいこ", "負け"];
+      const judge_text = ["不正解", "正解", "不正解"];
 
       // 連勝数記録
       let win_num = 0;
@@ -57,8 +57,8 @@
         // 勝敗判定
         let result = judge[player_hand][comp_hand];
         // 結果表示
-        let msg="player:"+hand_text[player_hand]+"<br>"+
-            "comp:"+hand_text[comp_hand]+"<br>"+
+        let msg="解答:"+hand_text[player_hand]+"<br>"+
+            "答え:"+hand_text[comp_hand]+"<br>"+
             "結果:" + judge_text[result];
         $("#result").html(msg);
         // 勝敗ごとの処理
