@@ -57,15 +57,15 @@
         // 勝敗判定
         let result = judge[player_hand][comp_hand];
         // 結果表示
-        let msg="第二問:高岡くんの趣味はボイパである"+"<br>"+
-        "解答:"+hand_text[player_hand]+"<br>"+
+        let msg="解答:"+hand_text[player_hand]+"<br>"+
             "答え:"+hand_text[comp_hand]+"<br>"+
             "結果:" + judge_text[result];
         $("#result").html(msg);
         // 勝敗ごとの処理
         if(result == judge_win) {
           win_num++;
-          $("#result2").html(win_num + "連勝!");
+          $("#result2").html(win_num + "問正解!")
+          gameover();
         } else if (result == judge_draw) {
           $("#result2").html("あいこ");
         } else {
